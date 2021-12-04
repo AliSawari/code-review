@@ -7,6 +7,7 @@ import { router as favoriteRouter } from "./routes/favorite.router";
 import { router as profileRouter } from "./routes/profile.router";
 import { router as simulatorRouter } from "./routes/simulator.router";
 import { router as LoginRouter } from './routes/login.router';
+import compression from 'compression';
 
 mongoose
   .connect(`${DBURL}`, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -18,6 +19,7 @@ const app = express();
 app.use(cors({ origin: CORS_ORIGINS }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(compression())
 app.use(favoriteRouter);
 app.use(profileRouter);
 app.use(simulatorRouter);
