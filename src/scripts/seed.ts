@@ -17,7 +17,7 @@ mongoose.connect(DBURL, {
     name: `Ali`,
     email: `ali@ali.com`,
     capital: `345`,
-    divisa: `sure`,
+    divisa: `yes`,
     prefered_cryptocurrency: `ETH`,
     password: '123456789'
   });
@@ -31,19 +31,19 @@ mongoose.connect(DBURL, {
       name: `String`,
       start_date: `01/05/2021`,
       check_date: `01/05/2021`,
-      cryptocurrency: `String`,
+      cryptocurrency: `ETH`,
       divisa: `String`,
-      Crypto_price_start: `123`,
-      Crypto_price_check: `123`,
+      Crypto_price_start: `1`,
+      Crypto_price_check: `4000`,
     });
     await simulator.save();
 
     const favorite = new Favorite({
       profile_id: result._id,
-      name: `String`,
-      favorite1: `String`,
-      favorite2: `String`,
-      favorite3: `String`,
+      name: `MyFav`,
+      favorite1: `ETH`,
+      favorite2: `ADA`,
+      favorite3: `DOT`,
     });
     await favorite.save();
 
