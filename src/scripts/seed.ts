@@ -15,6 +15,7 @@ mongoose.connect(DBURL, {
   const profile = new Profile({
     name: `Ali`,
     email: `ali@ali.com`,
+    nickname: "Ali",
     capital: `345`,
     divisa: `yes`,
     prefered_cryptocurrency: `ETH`,
