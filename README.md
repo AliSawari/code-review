@@ -130,3 +130,10 @@ $ docker run -p <your_local_port>:3000 -v <static_path_to_your_env>:/app/.env -d
 ```
 
 please note that 3000 is the default configured port. if you have supplied the `PORT` env in the separate `.env` file, use that one.
+
+
+## Other Ideas for Improving the Code
+there are few other options that could be tweaked to better shape this project into a better "production-ready" one.
+
+- Logging Information by an Advanced Logger Service
+- Unit and Integration Tests using Testing Frameworks
