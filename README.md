@@ -6,6 +6,7 @@
 and a new express middleware to create an access layer for the routes
 - a new login route for the users to login, using the profile model already provided before
 - small changes to the profile model. added password property to give password to each new profile
+- added compression library to use the compression middleware, reducing the response size 
 - completed all the APIs for a full CRUD operation (except for Profile APIs), applied the Auth Middleware to all. 
 - removed unnecessary console.logs
 - used try/catch for the async/await syntax, so that each error does not stop the runtime and
@@ -14,8 +15,8 @@ cause the whole application to crash
 - changed the POST /api/simulator/:profile_id to POST /api/simulator and send the profile_id via body.
 - slightly changed the seed.ts scripts to initialize the DB with better random objects
 - created a small script to generate random keys for the API_SECRET_KEY using 32 random bytes
+- changed the package.json and removed extra and unused dependencies
 - Created a Dockerfile to containerize the project.
-
 
 
 
@@ -65,6 +66,10 @@ I have added the try/catch block for all async operations, it is suggested to us
 
 console.logs are removed and only errors pop in the terminal.
 
+
+## Compression
+I have added the famous `compression` library and middleware to help reduce the response sizes for a faster response.  
+
 ## Helpers
 
 as mentioned before, i have created a new folder, **helpers**. in this folder i have created a few helping functions to help me better code. in this folder you'll find **shouldHave** and **validateEmail** files.
@@ -85,6 +90,27 @@ the code already uses the `dotenv` library. so I have created a new `.env` file 
 ## Scripts
 
 I have slightly changed the `seed.ts` file so it will generate better data to test out. I also created **createRandomByte** in the scripts folder to generate random 32 Bytes of Hex String in order to use for the  `API_SECRET_KEY` env var.
+
+## Dependencies
+using the [depcheck](https://www.npmjs.com/package/depcheck) library. i have found and deleted the unused dependencies
+this results in a faster build and a smaller bundle size. 
+
+
+Unused dependencies
+- @types/express-handlebars
+- chart.js
+- lodash
+- express-handlebars
+- luxon
+
+
+I have also added few other dependencies which i have used in the code 
+added dependencies
+- @types/jsonwebtoken
+- jsonwebtoken
+- compression
+- bcrypt
+
 
 ## Containerization
 
