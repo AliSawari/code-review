@@ -72,16 +72,16 @@ I have added the famous `compression` library and middleware to help reduce the 
 
 ## Helpers
 
-as mentioned before, i have created a new folder, **helpers**. in this folder i have created a few helping functions to help me better code. in this folder you'll find **shouldHave** and **validateEmail** files.
+as mentioned before, i have created a new folder, **helpers**. in this folder i have created a few helping functions to help me write better code. in this folder you'll find **shouldHave** and **validateEmail** files.
 
-**shouldHave** is a simple function that takes 2 arguments and gives back 2. the first is the body and the second is the required params. as you can see it will look for the required params in the provided body, and it will make a log out of the current data. so if the notFound array is not empty, that means there is a missing params in the sent body.
+**shouldHave** is a simple function that takes 2 arguments and gives back 2. the first is the body and the second is the required params. as you can see in `shouldHave.ts` it will look for the required params in the provided body, and it will make a log out of the current data. so if the notFound array is not empty, that means there is a missing params in the sent body.
 
 **validateEmail** is a function that uses RegExp to look for a valid email. it takes one argument and transforms it to string and searches that string for a valid email format.
 
 
 ## REST response codes and messages 
 
-I added HTTP response codes and messages to all of the responses to keep the APIs more easy to use.
+I have added HTTP response codes and messages to all of the responses to keep the APIs readable and easy to use.
 
 ## Environments and Config
 
@@ -114,7 +114,7 @@ added dependencies
 
 ## Containerization
 
-adding `docker` is always fun and entertaining for me. there's a new `Dockerfile` paied with a `.dockerignore` to ship the code into a docker image. 
+adding `docker` is always fun and entertaining for me. there's a new `Dockerfile` paired with a `.dockerignore` to ship the code into a docker image.
 
 
 ## RUN
@@ -122,7 +122,7 @@ adding `docker` is always fun and entertaining for me. there's a new `Dockerfile
 please note that `.env` is empty, and it needs to have entries to run.**DBURL** and **API_SECRET_KEY**.
 provide these in a separate `.env` file before running the project.
 
-after cloning the project, run the following commands in the project root 
+after cloning the project, run the following commands in the project root directory.
 
 ```bash
 $ docker build -t <any_name> ./
@@ -133,7 +133,8 @@ please note that 3000 is the default configured port. if you have supplied the `
 
 
 ## Other Ideas for Improving the Code
-there are few other options that could be tweaked to better shape this project into a better "production-ready" one.
+there are few other options that could be tweaked to shape this project into a better "production-ready" one.
 
 - Logging Information by an Advanced Logger Service
 - Unit and Integration Tests using Testing Frameworks
+- Availability and Advanced Performance Tests 
