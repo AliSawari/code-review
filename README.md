@@ -131,6 +131,9 @@ $ docker run -p <your_local_port>:3000 -v <static_path_to_your_env>:/app/.env -d
 
 please note that 3000 is the default configured port. you should use the configured port if you already supplied the `PORT` env variable in the separate `.env` file.
 
+You can alternatively run the `npm run dev` to run the project without compiling it
+or build it using `npm run build` then run it with `npm start`
+
 
 ## Other Ideas for Improving the Code
 there are few other options that could be tweaked to shape this project into a better "production-ready" one.
