@@ -34,7 +34,7 @@ all the APIs were exposed to the public with no authentication whatsoever, so I 
 **Profile** now has a password. which is used to login with as a user.
 
 
-**Favorite**'s profile_id type is changed to Schema.Types.ObjectId. it is best to tell MongoDB what can of Data we want to save, instead of plain old String
+**Favorite**'s profile_id type is changed to Schema.Types.ObjectId. it is best to tell MongoDB what type of Data we want to save, instead of plain old String
 
 
 ## Changes to Routes and APIs
