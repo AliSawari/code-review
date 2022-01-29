@@ -62,9 +62,9 @@ the **POST /api/profile** also was subject to security changes. the passwords ar
 
 ### Async/Await is Great! if you constantly catch the errors! :smiley:
 
-I have added the try/catch block for all async operations, it is suggested to use try catch block especially in a backend service application so if by any chance an error occurs, the runtime does not stop and the service can keep functioning for other API calls. please note that i only have consoled.log the errors here, and i dont send them back to the client, again for maintaining the security practice.
+I have added the try/catch block for all async operations, it is suggested to use try catch block especially in a backend service application so if by any chance an error occurs, the runtime does not stop and the service can keep functioning for other API calls. please note that i only `console.log()` the errors, and i dont send them back to the client, again for maintaining the security practice.
 
-console.logs are removed and only errors pop in the terminal.
+unnecessary `console.log()`s are removed and only errors pop in the terminal.
 
 
 ## Compression
@@ -122,14 +122,14 @@ adding `docker` is always fun and entertaining for me. there's a new `Dockerfile
 please note that `.env` is empty, and it needs to have entries to run.**DBURL** and **API_SECRET_KEY**.
 provide these in a separate `.env` file before running the project.
 
-after cloning the project, run the following commands in the project root directory.
+after cloning the project, and configuring the env file, run the following commands in the project root directory.
 
 ```bash
 $ docker build -t <any_name> ./
 $ docker run -p <your_local_port>:3000 -v <static_path_to_your_env>:/app/.env -d <any_name>
 ```
 
-please note that 3000 is the default configured port. if you have supplied the `PORT` env in the separate `.env` file, use that one.
+please note that 3000 is the default configured port. you should use the configured port if you already supplied the `PORT` env variable in the separate `.env` file.
 
 
 ## Other Ideas for Improving the Code
