@@ -60,7 +60,7 @@ the **POST /api/profile** also was subject to security changes. the passwords ar
 
 ## Syntax Changes
 
-### Async/Await is Great! if you constantly catch the errors! :smiley:
+### Async/Await is Great! if you constantly catch the errors :smiley:
 
 I have added the try/catch block for all async operations, it is suggested to use try catch block especially in a backend service application so if by any chance an error occurs, the runtime does not stop and the service can keep functioning for other API calls. please note that i only `console.log()` the errors, and i dont send them back to the client, again for maintaining the security practice.
 
@@ -68,11 +68,11 @@ unnecessary `console.log()`s are removed and only errors pop in the terminal.
 
 
 ## Compression
-I have added the famous `compression` library and middleware to help reduce the response sizes for a faster response.  
+I have added the `compression` library and middleware to help reduce the response sizes for a faster response.  
 
 ## Helpers
 
-as mentioned before, i have created a new folder, **helpers**. in this folder i have created a few helping functions to help me write better code. in this folder you'll find **shouldHave** and **validateEmail** files.
+as mentioned before, i have created a new folder, **helpers**. in this folder i have a few helping functions to help me write better code. in this folder you'll find **shouldHave** and **validateEmail** files.
 
 **shouldHave** is a simple function that takes 2 arguments and gives back 2. the first is the body and the second is the required params. as you can see in `shouldHave.ts` it will look for the required params in the provided body, and it will make a log out of the current data. so if the notFound array is not empty, that means there is a missing params in the sent body.
 
